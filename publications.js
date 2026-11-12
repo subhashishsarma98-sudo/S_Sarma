@@ -109,10 +109,15 @@
     }).sort((a, b) => yearValue(b) - yearValue(a) || clean(a.title).localeCompare(clean(b.title)));
 
     const count = filtered.length;
-    resultLabel.textContent = `${count} ${count === 1 ? 'record' : 'records'}${records.length ? ` shown · ${records.length} total` : ''}`;
-    totalLabel.textContent = records.length
-      ? `${records.length} ${records.length === 1 ? 'scholarly record' : 'scholarly records'} in the archive`
-      : 'Publication records will appear here';
+    // These summary labels are optional so a simplified page layout can omit them.
+    if (resultLabel) {
+      resultLabel.textContent = `${count} ${count === 1 ? 'record' : 'records'}${records.length ? ` shown · ${records.length} total` : ''}`;
+    }
+    if (totalLabel) {
+      totalLabel.textContent = records.length
+        ? `${records.length} ${records.length === 1 ? 'scholarly record' : 'scholarly records'} in the archive`
+        : 'Publication records will appear here';
+    }
 
     if (!records.length) {
       archive.innerHTML = `
@@ -120,7 +125,7 @@
           <div class="empty-state-mark" aria-hidden="true">⌁</div>
           <div><h2>Your scholarly record will appear here.</h2><p>No publication entries have been added yet. Send your publication list or academic CV, and the records can be entered here in chronological order. Please include DOI links where available.</p><span class="empty-state-hint">CONTENT PLACEHOLDER · NO PUBLICATIONS HAVE BEEN INVENTED</span></div>
         </div>`;
-      resultLabel.textContent = '0 publication records added';
+      if (resultLabel) resultLabel.textContent = '0 publication records added';
       return;
     }
 
