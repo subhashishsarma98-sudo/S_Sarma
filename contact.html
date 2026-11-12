@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,14 +10,21 @@
   <link rel="stylesheet" href="styles.css">
   <script src="site-data.js" defer></script>
   <script src="contact.js" defer></script>
+  <script src="interactions.js" defer></script>
 </head>
+
 <body class="contact-page">
   <div id="scroll-progress"></div>
   <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header" id="top">
     <div class="container nav-wrap">
- 
-      <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+      <button class="menu-toggle" id="menu-toggle" type="button"
+        aria-label="Open navigation menu" aria-expanded="false"
+        aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+
       <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
         <a class="nav-link" href="index.html">Home</a>
         <a class="nav-link" href="publications.html">Publications</a>
@@ -25,61 +33,114 @@
       </nav>
     </div>
   </header>
+
   <main id="main">
     <section class="contact-hero">
       <div class="container contact-hero-inner">
         <div class="contact-hero-copy">
-        
           <h1>Let’s start a<br><em>conversation.</em></h1>
-          <p>For academic correspondence, research discussions, writing enquiries or potential collaborations, please use the contact details below.</p>
-          
+          <p>
+            For academic correspondence, research discussions, writing
+            enquiries or potential collaborations, please use the contact
+            details below.
+          </p>
         </div>
-        <div class="contact-hero-art" aria-hidden="true">
-          <div class="contact-orbit contact-orbit-one"></div><div class="contact-orbit contact-orbit-two"></div>
-          <svg viewBox="0 0 240 240"><path d="M45 120c0-41 34-75 75-75s75 34 75 75-34 75-75 75-75-34-75-75Z"/><path d="M120 45v150M45 120h150M67 67l106 106M173 67 67 173"/><circle cx="120" cy="120" r="17"/><circle cx="120" cy="45" r="4"/><circle cx="195" cy="120" r="4"/><circle cx="120" cy="195" r="4"/><circle cx="45" cy="120" r="4"/></svg>
+
+        <div class="contact-hero-art" aria-label="Connect, exchange and collaborate">
           <span class="contact-art-label">CONNECT / EXCHANGE / COLLABORATE</span>
         </div>
       </div>
-      
     </section>
 
     <section class="contact-content-section">
       <div class="container">
         <div class="contact-intro-row">
-          <h2>Reach out to me<br><em>directly.</em></h2></div>
-         
+          <h2>Reach out to me<br><em>directly.</em></h2>
         </div>
+
         <div class="contact-card-grid">
           <article class="contact-detail-card contact-email-card">
             <span class="contact-card-index">01 / EMAIL</span>
             <span class="contact-icon" aria-hidden="true">✉</span>
             <h2>Professional email</h2>
-            <a class="contact-value contact-email-value" data-email-link href="mailto:Subhashish.sarma98@gmail.com"><span data-contact-email>Subhashish.sarma98@gmail.com</span><span aria-hidden="true">↗</span></a>
-            <p>For research-related communication, academic enquiries and collaboration proposals.</p>
-            <div class="contact-actions"><a class="contact-action-button primary-contact-action" data-email-link href="mailto:Subhashish.sarma98@gmail.com">Send an email <span aria-hidden="true">↗</span></a><button class="contact-action-button" type="button" data-copy="email">Copy email</button></div>
+
+            <a class="contact-value contact-email-value"
+              data-email-link href="mailto:Subhashish.sarma98@gmail.com">
+              <span data-contact-email>Subhashish.sarma98@gmail.com</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <p>
+              For research-related communication, academic enquiries and
+              collaboration proposals.
+            </p>
+
+            <div class="contact-actions">
+              <a class="contact-action-button primary-contact-action"
+                data-email-link href="mailto:Subhashish.sarma98@gmail.com">
+                Send an email <span aria-hidden="true">↗</span>
+              </a>
+              <button class="contact-action-button" type="button" data-copy="email">
+                Copy email
+              </button>
+            </div>
           </article>
+
           <article class="contact-detail-card">
             <span class="contact-card-index">02 / POSTAL ADDRESS</span>
             <span class="contact-icon" aria-hidden="true">⌖</span>
             <h2>Postal correspondence</h2>
-            <address class="contact-address" data-contact-address>Barpeta Road, Milan Nagar, Ward No. 08<br>Post Office: Simlaguri<br>PIN: 781315<br>Assam, India</address>
+
+            <address class="contact-address" data-contact-address>
+              Barpeta Road, Milan Nagar, Ward No. 08<br>
+              Post Office: Simlaguri<br>
+              PIN: 781315<br>
+              Assam, India
+            </address>
+
             <p>For letters and other postal correspondence.</p>
-            <div class="contact-actions"><button class="contact-action-button primary-contact-action" type="button" data-copy="address">Copy postal address</button></div>
+
+            <div class="contact-actions">
+              <button class="contact-action-button primary-contact-action"
+                type="button" data-copy="address">
+                Copy postal address
+              </button>
+            </div>
           </article>
+
           <article class="contact-detail-card contact-profile-card">
             <span class="contact-card-index">03 / ACADEMIC PROFILE</span>
             <span class="contact-icon" aria-hidden="true">◎</span>
             <h2>ResearchGate</h2>
-            <p>Visit my ResearchGate profile to explore my academic profile and research contributions.</p>
-            <div class="contact-actions"><a class="contact-action-button primary-contact-action" data-researchgate-link href="https://www.researchgate.net/profile/Subhashish-Sarma-2?ev=hdr_xprf" target="_blank" rel="noopener noreferrer">View ResearchGate profile <span aria-hidden="true">↗</span></a></div>
+            <p>
+              Visit my ResearchGate profile to explore my academic profile
+              and research contributions.
+            </p>
+
+            <div class="contact-actions">
+              <a class="contact-action-button primary-contact-action"
+                data-researchgate-link
+                href="https://www.researchgate.net/profile/Subhashish-Sarma-2?ev=hdr_xprf"
+                target="_blank" rel="noopener noreferrer">
+                View ResearchGate profile <span aria-hidden="true">↗</span>
+              </a>
+            </div>
           </article>
         </div>
-        <p class="contact-copy-status" id="contact-copy-status" role="status" aria-live="polite"></p>
+
+        <p class="contact-copy-status" id="contact-copy-status"
+          role="status" aria-live="polite"></p>
       </div>
     </section>
-   
   </main>
-  <footer class="site-footer"><div class="container footer-bottom"><span>© <span id="current-year"></span> <span data-site-name>Subhashish Sarma</span>. All rights reserved.</span><b></b></span></div></footer>
-<script src="interactions.js" defer></script>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <span>
+        © <span id="current-year"></span>
+        <span data-site-name>Subhashish Sarma</span>. All rights reserved.
+      </span>
+    </div>
+  </footer>
 </body>
 </html>
