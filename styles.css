@@ -804,3 +804,106 @@ html {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ==========================================
+   BIOLOGICAL MICROBE CURSOR
+========================================== */
+
+@media (hover: hover) and (pointer: fine) {
+  body,
+  body a,
+  body button,
+  body input,
+  body select {
+    cursor: none;
+  }
+
+  .bio-cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 34px;
+    height: 34px;
+    border: 1px solid rgba(87, 190, 160, 0.8);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+    transition:
+      width .25s ease,
+      height .25s ease,
+      border-color .25s ease,
+      background .25s ease;
+    background: rgba(87, 190, 160, 0.09);
+    box-shadow: 0 0 18px rgba(87, 190, 160, .16);
+  }
+
+  .bio-cursor::before {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    background: #64c9a5;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 12px #64c9a5;
+  }
+
+  .bio-cursor::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #a2dfc7;
+    top: 3px;
+    right: 4px;
+    box-shadow: 0 0 8px #a2dfc7;
+  }
+
+  .bio-cursor.is-hovering {
+    width: 54px;
+    height: 54px;
+    background: rgba(87, 190, 160, 0.16);
+    border-color: #64c9a5;
+  }
+
+  .bio-cursor.is-clicking {
+    width: 23px;
+    height: 23px;
+  }
+
+  .bio-cursor-particle {
+    position: fixed;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #64c9a5;
+    opacity: .5;
+    pointer-events: none;
+    z-index: 99998;
+    transform: translate(-50%, -50%);
+  }
+
+  .bio-cursor-ripple {
+    position: fixed;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #64c9a5;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99997;
+    transform: translate(-50%, -50%);
+    animation: bioRipple .65s ease-out forwards;
+  }
+
+  @keyframes bioRipple {
+    to {
+      width: 65px;
+      height: 65px;
+      opacity: 0;
+    }
+  }
+}
