@@ -570,7 +570,15 @@ a.archive-doi:hover { border-color: var(--teal); background: rgba(45, 130, 121, 
     backdrop-filter: blur(10px);
     transition: box-shadow 0.3s ease;
 }
-
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: #2d8279;
+    z-index: 2000;
+}
 .site-header.scrolled {
     box-shadow: 0 3px 12px rgba(0,0,0,0.08);
 }
