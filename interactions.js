@@ -10,3 +10,11 @@ window.addEventListener("scroll", () => {
 
     progressBar.style.width = `${progress}%`;
 });
+/* Sticky navigation shadow */
+const header = document.querySelector(".site-header");
+
+if (header) {
+    window.addEventListener("scroll", () => {
+        header.classList.toggle("scrolled", window.scrollY > 20);
+    });
+}
