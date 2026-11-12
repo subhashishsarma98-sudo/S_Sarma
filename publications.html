@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,18 +10,21 @@
   <link rel="stylesheet" href="styles.css">
   <script src="site-data.js" defer></script>
   <script src="publications.js" defer></script>
+  <script src="interactions.js" defer></script>
 </head>
+
 <body class="publications-page">
   <div id="scroll-progress"></div>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header" id="top">
     <div class="container nav-wrap">
-     
-
-      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav">
+      <button class="menu-toggle" id="menu-toggle" type="button"
+        aria-label="Open navigation menu" aria-expanded="false"
+        aria-controls="primary-nav">
         <span></span><span></span><span></span>
       </button>
+
       <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
         <a class="nav-link" href="index.html">Home</a>
         <a class="nav-link active" href="publications.html" aria-current="page">Publications</a>
@@ -36,6 +40,10 @@
         <div class="publications-hero-copy">
           <h1>Research &amp;<br><em>publications.</em></h1>
         </div>
+
+        <div class="publications-hero-art" aria-label="Research, discovery and contribution">
+          <span class="publications-art-label">RESEARCH / DISCOVERY / CONTRIBUTION</span>
+        </div>
       </div>
     </section>
 
@@ -45,15 +53,25 @@
           <div>
             <h2>Work, arranged<br>by <em>year.</em></h2>
           </div>
-          <p class="publication-intro-note">Use the search and filters to find a particular title, author, journal, year or DOI. Each DOI link opens its registered record in a new tab.</p>
+          <p class="publication-intro-note">
+            Use the search and filters to find a particular title, author,
+            journal, year or DOI. Each DOI link opens its registered record
+            in a new tab.
+          </p>
         </div>
 
         <div class="publication-controls" aria-label="Publication filters">
-          <label class="publication-search-label" for="publication-search">Search publications</label>
+          <label class="publication-search-label" for="publication-search">
+            Search publications
+          </label>
+
           <div class="publication-search-wrap">
             <span aria-hidden="true">⌕</span>
-            <input id="publication-search" type="search" placeholder="Search title, author, journal or DOI…" autocomplete="off">
+            <input id="publication-search" type="search"
+              placeholder="Search title, author, journal or DOI…"
+              autocomplete="off">
           </div>
+
           <label class="sr-only" for="publication-type">Filter by type</label>
           <select id="publication-type">
             <option value="all">All publication types</option>
@@ -62,15 +80,28 @@
             <option value="review-article">Review articles</option>
             <option value="other">Other contributions</option>
           </select>
+
           <label class="sr-only" for="publication-year">Filter by year</label>
-          <select id="publication-year"><option value="all">All years</option></select>
-          <button class="filter-reset" id="clear-filters" type="button">Clear filters <span aria-hidden="true">↺</span></button>
+          <select id="publication-year">
+            <option value="all">All years</option>
+          </select>
+
+          <button class="filter-reset" id="clear-filters" type="button">
+            Clear filters <span aria-hidden="true">↺</span>
+          </button>
         </div>
 
         <div id="publication-archive" class="publication-archive" aria-live="polite">
           <div class="publication-empty-state">
             <div class="empty-state-mark" aria-hidden="true">⌁</div>
-            <div><h2>Your scholarly record will appear here.</h2><p>Add your verified publication details in <code>site-data.js</code>. The archive will automatically arrange entries from newest to oldest.</p></div>
+            <div>
+              <h2>Your scholarly record will appear here.</h2>
+              <p>
+                Add your verified publication details in
+                <code>site-data.js</code>. The archive will automatically
+                arrange entries from newest to oldest.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -79,9 +110,11 @@
 
   <footer class="site-footer">
     <div class="container footer-bottom">
-      <span>© <span id="current-year"></span> <span data-site-name>Subhashish Sarma</span>. All rights reserved.</span>
+      <span>
+        © <span id="current-year"></span>
+        <span data-site-name>Subhashish Sarma</span>. All rights reserved.
+      </span>
     </div>
   </footer>
-<script src="interactions.js" defer></script>
 </body>
 </html>
