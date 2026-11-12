@@ -1,11 +1,14 @@
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#102b35">
-  <meta name="description" content="Scientific articles and field notes by Subhashish Sarma.">
+
+  <meta name="description"
+    content="Scientific articles and field notes by Subhashish Sarma.">
 
   <title>Blog | Subhashish Sarma</title>
 
@@ -18,12 +21,14 @@
 
 <body class="blog-page">
 
+  <!-- Scroll progress -->
   <div id="scroll-progress"></div>
 
   <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- Navigation -->
   <header class="site-header" id="top">
+
     <div class="container nav-wrap">
 
       <button
@@ -32,44 +37,58 @@
         aria-label="Open navigation menu"
         aria-expanded="false"
         aria-controls="primary-nav">
+
         <span></span>
         <span></span>
         <span></span>
+
       </button>
 
-      <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <nav class="primary-nav" id="primary-nav"
+        aria-label="Main navigation">
+
         <a class="nav-link" href="index.html">Home</a>
-        <a class="nav-link" href="publications.html">Publications</a>
-        <a class="nav-link active" href="blog.html" aria-current="page">Blog</a>
-        <a class="nav-link" href="contact.html">Contact</a>
+
+        <a class="nav-link" href="publications.html">
+          Publications
+        </a>
+
+        <a class="nav-link active"
+          href="blog.html"
+          aria-current="page">
+          Blog
+        </a>
+
+        <a class="nav-link" href="contact.html">
+          Contact
+        </a>
+
       </nav>
 
     </div>
+
   </header>
+
 
   <main id="main">
 
-    <!-- Blog Hero -->
+    <!-- Blog Hero Section -->
     <section class="blog-hero">
 
       <div class="container blog-hero-inner">
 
-        <!-- Left: Heading -->
+        <!-- Left side: Main heading -->
         <div class="blog-hero-copy">
+
           <h1>
             Ideas in<br>
             <em>conversation.</em>
           </h1>
+
         </div>
 
-        <!-- Right: Decorative artwork -->
-        <div class="blog-hero-art" aria-hidden="true">
-
-          <div class="blog-cell cell-one"></div>
-          <div class="blog-cell cell-two"></div>
-          <div class="blog-cell cell-three"></div>
-
-          <div class="blog-orbit"></div>
+        <!-- Right side: Text only, no artwork -->
+        <div class="blog-hero-art">
 
           <span class="blog-art-label">
             OBSERVE / QUESTION / EXPLAIN
@@ -81,14 +100,17 @@
 
     </section>
 
-    <!-- Blog Archive -->
+
+    <!-- Blog Archive Section -->
     <section class="blog-archive-section">
 
       <div class="container">
 
+        <!-- Section introduction -->
         <div class="blog-intro-row">
 
           <div>
+
             <p class="eyebrow">
               <span class="eyebrow-line"></span>
             </p>
@@ -97,15 +119,17 @@
               Writing from<br>
               <em>curiosity.</em>
             </h2>
+
           </div>
 
           <p class="blog-intro-note">
-            Browse article previews below. Open any article to view its
-            details and read the complete PDF in the browser, with an
-            option to download it.
+            Browse article previews below. Open any article to view
+            its details and read the complete PDF in the browser,
+            with an option to download it.
           </p>
 
         </div>
+
 
         <!-- Search and filters -->
         <div class="blog-controls">
@@ -115,59 +139,83 @@
           </label>
 
           <div class="blog-search-wrap">
+
             <span aria-hidden="true">⌕</span>
+
             <input
               id="blog-search"
               type="search"
               placeholder="Search titles, topics or descriptions…"
               autocomplete="off">
+
           </div>
+
 
           <label class="sr-only" for="blog-category">
             Filter by topic
           </label>
 
           <select id="blog-category">
+
             <option value="all">All topics</option>
+
           </select>
 
-          <button class="filter-reset" id="blog-clear" type="button">
-            Clear filters <span aria-hidden="true">↺</span>
+
+          <button
+            class="filter-reset"
+            id="blog-clear"
+            type="button">
+
+            Clear filters
+            <span aria-hidden="true">↺</span>
+
           </button>
 
         </div>
 
-        <!-- Results -->
+
+        <!-- Search results information -->
         <div class="blog-results-line">
 
           <p id="blog-results" aria-live="polite">
             Loading articles…
           </p>
 
-          <span>PDF ARTICLES OPEN IN A READER ↗</span>
+          <span>
+            PDF ARTICLES OPEN IN A READER ↗
+          </span>
 
         </div>
 
-        <!-- Article cards -->
-        <div id="blog-grid" class="blog-archive-grid" aria-live="polite">
+
+        <!-- Article grid -->
+        <div
+          id="blog-grid"
+          class="blog-archive-grid"
+          aria-live="polite">
 
           <div class="blog-empty-state">
 
-            <span class="empty-state-mark" aria-hidden="true">⌁</span>
+            <span class="empty-state-mark" aria-hidden="true">
+              ⌁
+            </span>
 
             <div>
+
               <h2>Your first article is waiting.</h2>
 
               <p>
-                Add an article title, preview text and PDF path to the
-                <code>articles</code> array in <code>site-data.js</code>.
-                It will appear here and in the homepage’s latest-articles
-                section.
+                Add an article title, preview text and PDF path to
+                the <code>articles</code> array in
+                <code>site-data.js</code>. It will appear here and
+                in the homepage’s latest-articles section.
               </p>
 
               <span class="empty-state-hint">
                 ARTICLE PLACEHOLDER · NO SAMPLE ARTICLES HAVE BEEN INVENTED
               </span>
+
             </div>
 
           </div>
@@ -179,6 +227,7 @@
     </section>
 
   </main>
+
 
   <!-- Footer -->
   <footer class="site-footer">
