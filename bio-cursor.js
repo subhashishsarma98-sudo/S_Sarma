@@ -24,6 +24,21 @@
       particle.className = "bio-cursor-particle";
       document.body.appendChild(particle);
       particles.push(particle);
+      // Handle the embedded PDF reader separately.
+document.addEventListener("pointerover", (event) => {
+  if (event.target.matches("iframe.pdf-reader")) {
+    document.documentElement.classList.add("bio-over-pdf");
+
+    cursor.classList.remove("visible", "is-hovering");
+    particles.forEach(p => p.style.opacity = "0");
+  }
+});
+
+document.addEventListener("pointerout", (event) => {
+  if (event.target.matches("iframe.pdf-reader")) {
+    document.documentElement.classList.remove("bio-over-pdf");
+  }
+});
     }
 
     let mouseX = -100;
