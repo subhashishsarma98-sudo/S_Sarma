@@ -1002,6 +1002,76 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .primary-nav { background: var(--paper); }
 }
 
+/* Restore the short editorial phrases beside page headings while keeping
+   the scientific illustrations removed for the minimalist theme. */
+.publications-hero-inner,
+.blog-hero-inner,
+.contact-hero-inner {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.15fr) minmax(190px, .85fr) !important;
+  align-items: center;
+  gap: clamp(24px, 6vw, 80px);
+}
+
+.publications-hero-art,
+.blog-hero-art,
+.contact-hero-art {
+  display: flex !important;
+  position: static !important;
+  width: auto !important;
+  min-height: 0 !important;
+  justify-content: flex-end;
+  align-items: center;
+  opacity: 1 !important;
+  visibility: visible !important;
+  overflow: visible;
+}
+
+/* Hide only the artwork, not the text label contained beside it. */
+.publications-hero-art .orbit,
+.publications-hero-art .helix-mark,
+.blog-hero-art .blog-cell,
+.blog-hero-art .blog-orbit,
+.contact-hero-art .contact-orbit,
+.contact-hero-art svg {
+  display: none !important;
+}
+
+.art-label,
+.blog-art-label,
+.contact-art-label {
+  display: inline-block !important;
+  color: #71877d;
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .18em;
+  line-height: 1.9;
+  text-align: right;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+@media (max-width: 650px) {
+  .publications-hero-inner,
+  .blog-hero-inner,
+  .contact-hero-inner {
+    grid-template-columns: 1fr !important;
+    gap: 18px;
+  }
+  .publications-hero-art,
+  .blog-hero-art,
+  .contact-hero-art {
+    justify-content: flex-start;
+  }
+  .art-label,
+  .blog-art-label,
+  .contact-art-label {
+    text-align: left;
+    font-size: 9px;
+  }
+}
+
 /* Custom biological cursor */
 .bio-cursor {
   position: fixed;
