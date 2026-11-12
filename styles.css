@@ -670,3 +670,137 @@ a.archive-doi:hover { border-color: var(--teal); background: rgba(45, 130, 121, 
         min-height: auto;
     }
 }
+
+/* =====================================
+   PREMIUM INTERACTION EFFECTS
+===================================== */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Elegant hero heading */
+.publications-hero h1,
+.contact-hero h1 {
+  animation: headingReveal 1s ease both;
+  letter-spacing: -0.045em;
+}
+
+/* Subtle animated heading appearance */
+@keyframes headingReveal {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+    filter: blur(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* Soft accent glow behind hero text */
+.publications-hero,
+.contact-hero {
+  position: relative;
+  isolation: isolate;
+}
+
+.publications-hero::after,
+.contact-hero::after {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(94, 180, 158, 0.13),
+    transparent 70%
+  );
+  top: 10%;
+  right: 8%;
+  z-index: -1;
+  pointer-events: none;
+  animation: glowPulse 6s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+  from {
+    transform: scale(0.85);
+    opacity: 0.55;
+  }
+
+  to {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
+
+/* Interactive contact cards */
+.contact-detail-card {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.contact-detail-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.10);
+}
+
+/* Animated navigation underline */
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.35s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Smooth button interaction */
+.contact-action-button {
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.contact-action-button:hover {
+  transform: translateY(-3px);
+}
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
